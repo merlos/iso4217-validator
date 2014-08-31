@@ -36,7 +36,7 @@ If the currency_code is invalid the validator adds an :invalid message error. If
 ```ruby
   class TestModel < ActiveRecord::Base
     include Iso4217::Validator
-    validates :currency_code, iso4217Code: {message: 'Oh! That's an invalid currency code.'}
+    validates :currency_code, iso4217Code: {message: "Oh! That's an invalid currency code."}
   end
 ```
 
