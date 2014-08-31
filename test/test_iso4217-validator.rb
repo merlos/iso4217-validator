@@ -40,6 +40,12 @@ module Iso4217
         assert m.valid?
       end
       
+      def test_code_in_lowercase
+        m = SampleModel.new(code: 'eur')
+        assert m.invalid?
+        
+      end
+      
       def test_invalid_code
         m = SampleModel.new(code: 123)
         assert m.invalid?

@@ -20,23 +20,27 @@ Or install it yourself as:
 
 ## Usage
 
-You need to include the validator in your model: 
+Include the validator in your model attribute this way: 
 
 ```ruby
   class TestModel < ActiveRecord::Base
-    include Iso4417::Validator
-    validates :currency_code, iso4417Code: true 
+    include Iso4217::Validator
+    validates :currency_code, iso4217Code: true 
   end
 ```  
 
-If the currency code is invalid it launches an :invalid message, if you want to customize the message you can use:
+currency_code attribute shall be defined as an string.
+
+If the currency_code is invalid the validator adds an :invalid message error, if you want to customize the error message you can use:
 
 ```ruby
   class TestModel < ActiveRecord::Base
-    include Iso4417::Validator
-    validates :currency_code, iso4417Code: {message: 'custom message'}
+    include Iso4217::Validator
+    validates :currency_code, iso4217Code: {message: 'Oh! That's an invalid currency code.'}
   end
 ```
+
+Please bear in mind that the validator is case sensitive. So 'EUR' is a valid code but 'eur' is not.
 
 ## Contributing
 
