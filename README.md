@@ -1,6 +1,6 @@
 # Iso4217::Validator
 
-Simple ruby on rails validator that checks if a value is a valid [ISO4217, http://en.wikipedia.org/wiki/ISO_4217] code. 
+Simple ruby on rails validator that checks if a value is a valid [ISO4217] (http://en.wikipedia.org/wiki/ISO_4217) code. 
 
 Examples of ISO4217 codes: EUR, USD, CHF, TWD, INR.
 
@@ -49,12 +49,11 @@ If the currency code is invalid it launches an :invalid message, if you want to 
 Please add unit tests when including new features. 
 
 ### Maintaining the list updated
-This is the source of the valid code list: http://www.currency-iso.org/en/home/tables/table-a1.html
-This file was updated in August 15, 2014.
+Source of the valid code list used: http://www.currency-iso.org/en/home/tables/table-a1.html
+The last version included in the gem: August 15, 2014.
 
-The script bin/extractor.rb can extract the codes from the excel file after
-converting it in a csv file. You can find the instructions within the extractor.rb file.
-
+The gem source includes an script (bin/extractor.rb) that can extract the codes from the excel file and convert it into the
+ruby array which is used by the validator. You can find more instructions within the extractor.rb file.
 
 ## License
 
