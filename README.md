@@ -31,7 +31,7 @@ Include the validator in your model attribute this way:
 
 currency_code attribute shall be defined as an string.
 
-If the currency_code is invalid the validator adds an :invalid message error, if you want to customize the error message you can use:
+If the currency_code is invalid the validator adds an :invalid message error. If you want to customize the error message you can use:
 
 ```ruby
   class TestModel < ActiveRecord::Base
