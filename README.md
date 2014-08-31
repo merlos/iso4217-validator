@@ -22,22 +22,22 @@ Or install it yourself as:
 
 You need to include the validator in your model: 
 
-'''ruby
+```ruby
   class TestModel < ActiveRecord::Base
     include Iso4417::Validator
     validates :currency_code, iso4417Code: true 
   end
-'''  
+```  
 
 If the currency code is invalid it launches an :invalid message, if you want to customize the message you can use:
 
-''' ruby
+```ruby
   class TestModel < ActiveRecord::Base
     include Iso4417::Validator
     validates :currency_code, iso4417Code: {message: 'custom message'}
   end
-  
-'''
+```
+
 ## Contributing
 
 1. Fork it ( http://github.com/merlos/iso4217-validator/fork )
@@ -56,7 +56,6 @@ The script bin/extractor.rb can extract the codes from the excel file after
 converting it in a csv file. You can find the instructions within the extractor.rb file.
 
 
-
 ## License
 
-Copyright (c) 2014 Juan M. Merlos under MIT License
+Copyright (c) 2014 Juan M. Merlos. Distributed under MIT License
